@@ -1,0 +1,18 @@
+---
+system:
+  - name: Catalyst
+    type: switch
+    company: cisco
+
+commands:
+  - sh_ver:
+      - engine: http
+        cmd: blah blah blah
+        ver: 1
+      - engine: SSH
+        cmd: blah vlah vlah..
+        ver: 1
+  - sh_run:
+      - engine: SSH
+        cmd: blah
+        ver: 1

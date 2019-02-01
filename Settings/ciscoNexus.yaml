@@ -1,0 +1,18 @@
+---
+system:
+  - name: Nexus
+    type: switch
+    company: cisco
+
+commands:
+  - sh_ver:
+      - engine: http
+        cmd: blah blah blah
+        ver: 12
+      - engine: SSH
+        cmd: blah vlah vlah..
+        ver: 12
+  - sh_run:
+      - engine: SSH
+        cmd: blah
+        ver: 1
