@@ -1,0 +1,12 @@
+---
+system:
+  - model: MS
+    type: switch
+    company: meraki
+
+commands:
+  - sh_ver:
+    - engine: http
+      cmd: blah blah blah
+      method: post
+      ver: 1

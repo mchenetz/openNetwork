@@ -1,0 +1,8 @@
+---
+Devices:
+  - ms-switch:
+    - name: msswitch
+      model: nexus
+      address: 192.168.10.1
+
+

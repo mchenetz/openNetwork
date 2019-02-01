@@ -2,10 +2,11 @@ class device:
 
     def __init__(self):
         self._commands = []
-        self._systemName = ""
+        self._model = ""
         self._name = ""
         self._engine = ""
         self._cmd = ""
+        self._method = ""
         self._version = 0
 
 
@@ -14,12 +15,12 @@ class device:
     def getCmd(self):
         return self._commands
     @property
-    def systemName(self):
-        return self._systemName
+    def model(self):
+        return self._model
 
-    @systemName.setter
-    def systemName(self, sysName):
-        self._systemName = sysName
+    @model.setter
+    def model(self, model):
+        self._model = model
 
     @property
     def name(self):
@@ -54,16 +55,24 @@ class device:
         self._version = ver
 
     @property
+    def method(self):
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        self._method = method
+
+    @property
     def record(self):
         return self._commands
 
     def addRecord(self):
-        self._commands.append({'systemName': self._systemName, 'name': self._name, 'engine': self._engine, 'cmd': self._cmd, 'version': self._version})
+        self._commands.append({'model': self._model, 'name': self._name, 'engine': self._engine, 'cmd': self._cmd, 'method:': self._method, 'version': self._version})
         return(200)
 
-    def getDevBySys(self, sysName):
+    def getDevBySys(self, model):
         results = []
         for dev in self.record:
-            if dev['systemName'] == sysName:
+            if dev['model'] == model:
                 results.append(dev)
         return results
