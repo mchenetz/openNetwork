@@ -62,6 +62,8 @@ class device:
         return(200)
 
     def getDevBySys(self, sysName):
+        results = []
         for dev in self.record:
-            if dev['systemName']==sysName:
-                return dev
+            if dev['systemName'] == sysName:
+                results.append(dev)
+        return results

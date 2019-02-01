@@ -18,17 +18,17 @@ def getYamlDef():
             Device.systemName = item.get('system')[0]['name']
             # Populate Commands
             for cmd in item['commands']:
-                Device.sysName = item.get('system')[0]['name']
-                item.
-                for command in cmd:
-                    print(command)
-                    Device.name = command
-                Device.engine = item.get('commands')[cmd][0]['engine']
-                Device.cmd = item.get('commands')[0][cmd][0]['cmd']
-                Device.version = item.get('commands')[0][cmd][0]['ver']
-                Device.addRecord()
-    print (Device.record[1]['systemName'])
-    print (Device.getDevBySys('Nexus')['name'])
+                for name in cmd:
+                    Device.name = name
+                    for engine in cmd[name]:
+                        Device.engine = engine['engine']
+                        Device.cmd = engine['cmd']
+                        Device.version = engine['ver']
+                        Device.addRecord()
+    print(Device.getDevBySys('Nexus'))
+
+    # for devs in Device.record:
+    #     print (devs)
 
 if __name__ == "__main__":
     main()
