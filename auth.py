@@ -21,7 +21,7 @@ class auth:
     @password.setter
     def password(self, password):
         self._password = password
- 
+
     @property
     def host(self):
         return self._host
@@ -29,11 +29,11 @@ class auth:
     @host.setter
     def host(self, host):
         self._host = host
-    
+
     @property
     def url(self):
         return self._url
-    
-    @host.setter
+
+    @url.setter
     def url(self, url):
         self._url = url
