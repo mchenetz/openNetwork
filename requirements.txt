@@ -1,2 +1,2 @@
-PyYAML==latest
-requests==latest
+PyYAML==3.13
+requests==2.21
