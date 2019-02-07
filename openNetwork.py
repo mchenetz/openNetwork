@@ -32,9 +32,8 @@ def populateYamlDef():
                         Device.cmd = ""
                         Device.method = ""
                         Device.version = 0
+    return Device.record
 
-    for dev in Device.record:
-        print(dev)
 
 if __name__ == "__main__":
     main()

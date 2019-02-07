@@ -6,7 +6,7 @@ class connect_http:
         pass
 
 
-    def get(self, url, method, request=None):
+    def uri(self, url, method, request=None):
         req = requests
         res = req.request(method,url, request=request)
         return res.json()

@@ -1,2 +1,4 @@
 PyYAML==3.13
 requests==2.21
+flask
+flask-restful

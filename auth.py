@@ -5,6 +5,7 @@ class auth:
         self._password = ""
         self._host = ""
         self._url = ""
+        self._authDB = []
 
     @property
     def username(self):
@@ -37,3 +38,6 @@ class auth:
     @url.setter
     def url(self, url):
         self._url = url
+
+    def save_auth(self):
+        self._authDB.append({self._username, self._password, self._host, self._url})
